@@ -9,7 +9,7 @@
   <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
-
+  <link href="{{asset 'css/bootstrap.min.css'}}" rel="stylesheet" />
   <link href="{{asset 'css/style.css'}}" rel="stylesheet" />
   <link href="{{asset 'css/colors-dark.css'}}" rel="stylesheet" />
 
@@ -19,68 +19,44 @@
 
 <body class="{{body_class}}">
 
-
-
   {{#if @blog.cover}}
     <div id="coverimg" style="background-image: url({{@blog.cover}})"></div>
   {{/if}}
 
-
-
   <header id="header">
-    {{#if @blog.logo}}
-      <a id="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" /></a>
-    {{else}}
-      <h1><a href="{{@blog.url}}"><i class="icon-sun"></i> {{@blog.title}}</a></h1>
-    {{/if}}
-    <p>{{@blog.description}}</p>
+      <h1><a href="{{@blog.url}}">{{@blog.title}}</a></h1>
   </header>
-
-
 
   <div id="page">
 
-
-
     <div id="sidebar">
-
       <nav>
         <ul>
           <li><a href="{{@blog.url}}">Home</a></li>
-          <li><a href="http://twitter.com/redwall_hp">Twitter</a></li>
-          <li><a href="{{@blog.url}}/rss/">RSS Feed</a></li>
+          <li><a href="http://twitter.com/mutexkid">Twitter</a></li>
+          <li><a href="http://github.com/mutexkid">Github</a></li>
+          <li><a href="http://www.linkedin.com/in/joshmskeen">LinkedIn</a></li>
+          <li><a href="{{@blog.url}}/about-me">About Me</a></li>
         </ul>
       </nav>
 
-      {{#post}}
-      {{#if author}}
         <div class="bio">
-          <img class="avatar" src="{{author.image}}" />
-          <h3>{{author.name}}</h3>
-          <p>{{author.bio}}</p>
+          <img class="avatar" src="assets/images/me.jpg" />
+          <h3>Josh Skeen</h3>
+          <p>Hello! I'm an Android Engineer &amp; Instructor at <br/><a href="http://bignerdranch.com">Big Nerd Ranch</a>. I'm also an <a href="http://soundcloud.com/mutexkid">aspiring electronic musician</a>, coffee snob, and yoga enthusiast.</p> <br/> <a href="mailto:josh@joshskeen.com">Get in touch!</a>
         </div>
-      {{/if}}
-      {{/post}}
 
     </div>
-
-
 
     <div id="content">
       {{{body}}}
     </div>
 
-
-
   </div>
 
-
-
   <footer id="footer">
-    <p class="copyright">Copyright &copy; 2013 {{@blog.title}}. Powered by <a href="http://ghost.org">Ghost</a>, theme by <a href="http://www.webmaster-source.com">Matt Harzewski</a></p>
+    <p class="copyright">Copyright &copy; {{date format='YYYY'}} {{@blog.title}}. Powered by <a href="http://ghost.org">Ghost</a>. <a href="{{@blog.url}}/rss/">RSS Feed</a>
   </footer>
-
-
 
   {{ghost_foot}}
 
@@ -91,8 +67,6 @@
       $('#sidebar nav ul').mobileMenu({'topOptionText': 'Menu', 'prependTo': '#sidebar nav'});
     });
   </script>
-
-
 
 </body>
 </html>

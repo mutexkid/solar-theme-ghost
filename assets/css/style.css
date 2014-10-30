@@ -29,7 +29,6 @@ table {
 }
 
 
-
 /*** Basics ***/
 body {
 	font-family: Verdana, serif;
@@ -88,7 +87,6 @@ h3 {
 	font-size: 14px;
 	margin: 0 0 10px 0;
 }
-
 
 
 /*** Useful Classes ***/
@@ -183,6 +181,9 @@ h3 {
 #sidebar .bio {
 	margin-top: 40px;
 	font-size: 0.8em;
+}
+#sidebar .bio a{
+	font-size: 1.2em;
 }
 
 #sidebar .bio img.avatar {
