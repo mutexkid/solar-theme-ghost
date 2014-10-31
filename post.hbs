@@ -7,7 +7,9 @@
 
     <div class="post-content">{{ content }}</div>
 
-    <p class="meta">Posted on <span class="postdate">{{date format="MMM Do, YYYY"}}</span></p>
+<section class="meta">
+ <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time> {{tags prefix=" on "}}
+    </section>
 
 </article>
 <div id="disqus_thread"></div>
