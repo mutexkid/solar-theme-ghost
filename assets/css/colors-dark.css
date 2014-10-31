@@ -44,3 +44,7 @@ blockquote {
 #footer {
 	border-color: #073642;
 }
+
+hr { display: block; height: 1px;
+    border: 0; border-top: 1px solid #7D5340;
+    margin: 1em 0; padding: 0; }
